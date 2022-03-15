@@ -1,23 +1,16 @@
-body {
-  background-image: url(/imagenjapon.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
 }
 
-.login-container {
-  position: relative;
-  top: 200px;
-  left: 35%;
-  display: block;
-  margin-bottom: 80px;
-  width: 500px;
-  height: 360px;
-  background: #fff;
-  border-radius: 5px;
-  overflow: hidden;
-  z-index: 1;
+main {
+  background-image: url("../imagenjapon.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -27,8 +20,18 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-shadow: 71px 19px 101px -44px black;
-          box-shadow: 71px 19px 101px -44px black;
+  width: 100%;
+  height: 100vh;
+}
+
+.login-container {
+  padding: 1.5em;
+  min-width: 50%;
+  background: #fff;
+  border-radius: 5px;
+  z-index: 1;
+  -webkit-box-shadow: 10px 0px 15px 15px rgba(41, 18, 22, 0.6), -10px 0px 15px 15px rgba(41, 18, 22, 0.5);
+          box-shadow: 10px 0px 15px 15px rgba(41, 18, 22, 0.6), -10px 0px 15px 15px rgba(41, 18, 22, 0.5);
 }
 
 .login-container .formulario {
@@ -38,23 +41,22 @@ body {
       grid-template-columns: 1fr 1fr;
   width: 100%;
   height: 100%;
+  gap: 1em;
 }
 
 .login-container .formulario h3 {
   grid-column: span 2;
-  font-size: 25px;
-  margin-top: 50px;
-  margin-left: 25px;
-  margin-bottom: 0;
+  font-size: 3.6em;
 }
 
 .login-container .formulario input {
   grid-column: span 2;
-  margin: 0px 30px 5px 30px;
+  padding: .5em 0;
+  margin: .3em 0;
   border: none;
   border-bottom: 3px dashed #d96363;
-  max-height: 30px;
-  font-size: 20px;
+  font-size: 1.2em;
+  background: transparent;
 }
 
 .login-container .formulario input:focus {
@@ -63,6 +65,7 @@ body {
 
 .login-container .formulario button {
   text-transform: uppercase;
+  padding: 1em;
   background-color: transparent;
   border: 2px solid #d96363;
   border-radius: 4px;
@@ -114,20 +117,15 @@ body {
   }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 450px) {
   .login-container {
-    top: 0;
-    left: 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    margin: auto;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.4);
+  }
+  .formulario {
+    -ms-flex-line-pack: center;
+        align-content: center;
   }
 }
 /*# sourceMappingURL=style.css.map */
